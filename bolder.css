@@ -1,1 +1,201 @@
+/* -----------------------------------
+   Body & Layout
+----------------------------------- */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #1a0735 0%, #4c2980 100%);
+  margin: 0;
+  color: #f0eef4;
+}
 
+/* -----------------------------------
+   Container styles
+----------------------------------- */
+.main-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* -----------------------------------
+   Header & Title
+----------------------------------- */
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  background: linear-gradient(90deg, #ff80b5 0%, #9089fc 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+/* -----------------------------------
+   Subheader count
+----------------------------------- */
+#guestCount {
+  display: block;
+  text-align: center;
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+/* -----------------------------------
+   Banner image styling
+----------------------------------- */
+.banner-img {
+  display: block;
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  filter: brightness(0.9);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+.banner-img:hover {
+  transform: scale(1.02);
+  filter: brightness(1);
+}
+
+/* -----------------------------------
+   Guest form styling
+----------------------------------- */
+form {
+  background: rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  margin-bottom: 2rem;
+}
+input,
+select,
+button {
+  font-family: inherit;
+}
+input,
+select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #f0eef4;
+  outline: none;
+  transition: background 0.3s ease;
+}
+input::placeholder {
+  color: #d1c8d4;
+}
+input:focus,
+select:focus {
+  background: rgba(255, 255, 255, 0.15);
+}
+button#addGuestBtn {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(90deg, #ff5f6d 0%, #ffc371 100%);
+  color: #1a0735;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+button#addGuestBtn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+button#addGuestBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* -----------------------------------
+   Guest Cards
+----------------------------------- */
+.guest-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.guest-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+.guest-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.guest-category {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+.rsvp-status {
+  margin-top: 0.25rem;
+}
+.rsvp-status.attending {
+  color: #7fff7f;
+}
+.rsvp-status.not-attending {
+  color: #ff7f7f;
+}
+
+/* Buttons within guest card */
+.guest-card button {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button.rsvp-btn {
+  background: #7cb342;
+  color: #1a0735;
+}
+button.edit-btn {
+  background: #42a5f5;
+  color: #1a0735;
+}
+button.remove-btn {
+  background: #ef5350;
+  color: #1a0735;
+}
+button.rsvp-btn:hover,
+button.edit-btn:hover,
+button.remove-btn:hover {
+  opacity: 0.9;
+}
+
+/* -----------------------------------
+   Empty State
+----------------------------------- */
+#emptyState {
+  opacity: 0.8;
+  font-size: 1.1rem;
+}
+
+/* -----------------------------------
+   Toast Message
+----------------------------------- */
+#toast {
+  font-family: inherit;
+  transform: translateX(120%);
+}
+#toast.show {
+  transform: translateX(0);
+}
+
+/* -----------------------------------
+   Stars keyframe for animation
+----------------------------------- */
+@keyframes twinkle {
+  from { transform: translateY(0); opacity: 0.1; }
+  to   { transform: translateY(-2px); opacity: 1; }
+}
