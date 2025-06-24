@@ -1,6 +1,3 @@
-/* -----------------------------------
-   Body & Layout
------------------------------------ */
 body {
   font-family: 'Inter', sans-serif;
   background: linear-gradient(135deg, #1a0735 0%, #4c2980 100%);
@@ -8,9 +5,6 @@ body {
   color: #f0eef4;
 }
 
-/* -----------------------------------
-   Container styles
------------------------------------ */
 .main-container {
   max-width: 800px;
   margin: 2rem auto;
@@ -20,9 +14,6 @@ body {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
-/* -----------------------------------
-   Header & Title
------------------------------------ */
 h1 {
   font-size: 3rem;
   font-weight: 800;
@@ -33,9 +24,6 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
-/* -----------------------------------
-   Subheader count
------------------------------------ */
 #guestCount {
   display: block;
   text-align: center;
@@ -43,9 +31,6 @@ h1 {
   opacity: 0.85;
 }
 
-/* -----------------------------------
-   Banner image styling
------------------------------------ */
 .banner-img {
   display: block;
   width: 100%;
@@ -61,9 +46,6 @@ h1 {
   filter: brightness(1);
 }
 
-/* -----------------------------------
-   Guest form styling
------------------------------------ */
 form {
   background: rgba(0,0,0,0.1);
   padding: 1.5rem;
@@ -115,9 +97,6 @@ button#addGuestBtn:disabled {
   cursor: not-allowed;
 }
 
-/* -----------------------------------
-   Guest Cards
------------------------------------ */
 .guest-card {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
@@ -146,7 +125,6 @@ button#addGuestBtn:disabled {
   color: #ff7f7f;
 }
 
-/* Buttons within guest card */
 .guest-card button {
   padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
@@ -171,19 +149,11 @@ button.rsvp-btn:hover,
 button.edit-btn:hover,
 button.remove-btn:hover {
   opacity: 0.9;
-}
-
-/* -----------------------------------
-   Empty State
------------------------------------ */
 #emptyState {
   opacity: 0.8;
   font-size: 1.1rem;
 }
 
-/* -----------------------------------
-   Toast Message
------------------------------------ */
 #toast {
   font-family: inherit;
   transform: translateX(120%);
@@ -192,9 +162,6 @@ button.remove-btn:hover {
   transform: translateX(0);
 }
 
-/* -----------------------------------
-   Stars keyframe for animation
------------------------------------ */
 @keyframes twinkle {
   from { transform: translateY(0); opacity: 0.1; }
   to   { transform: translateY(-2px); opacity: 1; }

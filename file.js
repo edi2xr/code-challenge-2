@@ -1,9 +1,7 @@
-// ---------- State ----------
 let guests = [];
 let guestIdCounter = 0;
 const MAX_GUESTS = 10;
 
-// ---------- Elements ----------
 const guestForm      = document.getElementById("guestForm");
 const guestNameInput = document.getElementById("guestName");
 const guestCategory  = document.getElementById("guestCategory");
@@ -16,14 +14,12 @@ const guestCount     = document.getElementById("guestCount");
 const totalGuestsEl  = document.getElementById("totalGuests");
 const starsContainer = document.getElementById("starsContainer");
 
-// ---------- Init ----------
 document.addEventListener("DOMContentLoaded", () => {
   generateStars(120);
   updateUI();
   guestForm.addEventListener("submit", handleAddGuest);
 });
 
-// ---------- Handlers ----------
 function handleAddGuest(e) {
   e.preventDefault();
   const name = guestNameInput.value.trim();
@@ -102,7 +98,6 @@ function saveEdit(guest, input) {
   updateUI();
 }
 
-// ---------- UI Updates ----------
 function updateUI() {
   renderGuestList();
   const attending = guests.filter(g => g.rsvpStatus === "Attending").length;
@@ -143,14 +138,12 @@ function renderGuestList() {
     .join("");
 }
 
-// ---------- Toast ----------
 function showToast(message, _type) {
   toastMsg.textContent = message;
   toastEl.classList.remove("translate-x-full");
   setTimeout(() => toastEl.classList.add("translate-x-full"), 3000);
 }
 
-// ---------- Stars Background ----------
 function generateStars(count = 100) {
   for (let i = 0; i < count; i++) {
     const star = document.createElement("div");
